@@ -1,6 +1,6 @@
-package com.sdet.auto.SeleniumExtensions;
+package com.sdet.auto.seleniumExtensions;
 
-import com.sdet.auto.TestHelper.IoLibrary;
+import com.sdet.auto.testHelper.IoLibrary;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,7 +18,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import static com.sdet.auto.SeleniumExtensions.WebDriverBase.driver;
+import static com.sdet.auto.seleniumExtensions.WebDriverBase.driver;
 
 public class WebDriverExtensions {
 

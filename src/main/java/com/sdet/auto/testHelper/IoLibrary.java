@@ -1,4 +1,4 @@
-package com.sdet.auto.TestHelper;
+package com.sdet.auto.testHelper;
 
 import java.io.File;
 import java.net.InetAddress;

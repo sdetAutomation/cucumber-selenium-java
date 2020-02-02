@@ -1,6 +1,6 @@
-package com.sdet.auto.SeleniumExtensions;
+package com.sdet.auto.seleniumExtensions;
 
-import com.sdet.auto.TestHelper.IoLibrary;
+import com.sdet.auto.testHelper.IoLibrary;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

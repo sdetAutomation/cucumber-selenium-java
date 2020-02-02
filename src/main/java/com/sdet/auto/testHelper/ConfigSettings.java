@@ -1,4 +1,4 @@
-package com.sdet.auto.TestHelper;
+package com.sdet.auto.testHelper;
 
 import java.io.IOException;
 import java.io.InputStream;

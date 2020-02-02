@@ -1,4 +1,4 @@
-package com.sdet.auto.TestHelper;
+package com.sdet.auto.testHelper;
 
 public class TestAssert {
 
