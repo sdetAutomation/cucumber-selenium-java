@@ -8,9 +8,9 @@
 ```
 
 # cucumber-java
-starter project for cucumber java
+starter project for cucumber using selenium and Java
 
-[![Build Status](https://travis-ci.org/sdetAutomation/cucumber-java.svg?branch=master)](https://travis-ci.org/sdetAutomation/cucumber-java)
+[![Build Status](https://travis-ci.org/sdetAutomation/cucumber-selenium-java.svg?branch=master)](https://travis-ci.org/sdetAutomation/cucumber-selenium-java)
 
 Introduction
 ------------

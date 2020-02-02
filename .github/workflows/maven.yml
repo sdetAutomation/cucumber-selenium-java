@@ -15,11 +15,11 @@ jobs:
           java-version: 1.8
       - name: Build with Maven Wrapper
         run: ./mvnw clean install -DskipTests
-      - name: Execute Account Tests
-        run: ./mvnw test -Dcucumber.options="--tags '@AcctTest'"
-      - name: Execute Login Tests
-        run: ./mvnw test -Dcucumber.options="--tags '@LoginTest'"
-      - name: Execute Mobile Tests
-        run: ./mvnw test -Dcucumber.options="--tags '@MobileTest'"
-      - name: Execute Web Tests
-        run: ./mvnw test -Dcucumber.options="--tags '@WebTest'"
+#      - name: Execute Account Tests
+#        run: ./mvnw test -Dcucumber.options="--tags '@AcctTest'"
+#      - name: Execute Login Tests
+#        run: ./mvnw test -Dcucumber.options="--tags '@LoginTest'"
+#      - name: Execute Mobile Tests
+#        run: ./mvnw test -Dcucumber.options="--tags '@MobileTest'"
+#      - name: Execute Web Tests
+#        run: ./mvnw test -Dcucumber.options="--tags '@WebTest'"
