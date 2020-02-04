@@ -55,10 +55,4 @@ public class WebDriverBase {
             throw new RuntimeException(String.format("Browser Type %s, not Found, please add additional code for this desired WebDriver Type.", browser));
         }
     }
-
-    public static void getWebDriver (WebDriver chrome){
-        driver = chrome;
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
-    }
 }

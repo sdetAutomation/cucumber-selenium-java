@@ -1,44 +1,25 @@
-@LoginTest
+@TestSetup @LoginTest @TestCleanup
 Feature: Application Login
 
   # prereq that runs before each test
   Background:
-    Given Validate the browser
-    When Browser is triggered
-    Then Check if browser is started
+    Given Browser is opened
+    Then Navigate to the Heroku landing page
+    And Check if page is ready
 
-  #dynamic feature
-  Scenario: Home page default login
-    Given User is on landing page
-    When User login into application with "test_user" and "1234"
-    Then Home page is populated
-    And Cards displayed "true"
+  Scenario: TC0001_ForgetPasswordTest
+    Given User clicks forget password link
+    And Enters email "sdet.testautomation@gmail.com" and clicks retrieve button
+    Then Verify email is sent message "Your e-mail's been sent!" is displayed
 
-#  #dynamic feature
-#  Scenario: Home page default login
-#    Given User is on landing page
-#    When User login into application with "bad_user" and "4321"
-#    Then Home page is populated
-#    And Cards displayed "false"
+  Scenario: TC0002_FormAuthentication
+    Given User clicks form authentication link
+    And Enters userid "tomsmith" and password "SuperSecretPassword!"
+    Then Verify SecureAreaPage message "You logged into a secure area!" is displayed
+    And User clicks logout button
+    Then Verify LoginPage message "You logged out of the secure area!" is displayed
 
-#  # datatable
-#  Scenario: Home page default login
-#    Given User is on landing page
-#    When User sign up with following details
-#    | test_user | abcd | test_user@gmail.co | usa | 54321|
-#    Then Home page is populated
-#    And Cards displayed "false"
-#
-#  # parameterization
-#  Scenario Outline: Home page default login
-#    Given User is on landing page
-#    When User login into application with <username> and <password>
-#    Then Home page is populated
-#    And Cards displayed "false"
-#
-#    Examples:
-#      |username  |password|
-#      |user1     |pass1   |
-#      |user2     |pass2   |
-#      |user3     |pass3   |
-#      |user4     |pass4   |
+  Scenario: TC0003_FormAuthenticationBadInfo
+    Given User clicks form authentication link
+    And Enters userid "sdetAutomatiom" and password "pass@word"
+    Then Verify LoginPage message "Your username is invalid!" is displayed

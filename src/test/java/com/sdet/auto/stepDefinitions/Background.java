@@ -1,22 +1,26 @@
 package com.sdet.auto.stepDefinitions;
 
+import com.sdet.auto.pageObjects.GuiHelper;
+import com.sdet.auto.pageObjects.HomePage;
+import com.sdet.auto.pageObjects.Navigation;
 import cucumber.api.java.en.*;
+
+import static com.sdet.auto.stepDefinitions.Hooks.testAssert;
 
 public class Background {
 
-    @Given("^Validate the browser$")
-    public void validate_the_browser() throws Throwable {
-        System.out.println("00a-validate_the_browser executed");
+    @Given("^Browser is opened$")
+    public void browser_is_opened() {
+        GuiHelper.openWebBrowser();
     }
 
-    @When("^Browser is triggered$")
-    public void browser_is_triggered() throws Throwable {
-        System.out.println("00b-browser_is_triggered executed");
+    @Then("^Navigate to the Heroku landing page$")
+    public void navigate_to_the_Heroku_landing_page()  {
+        Navigation.navToWebPageUnderTest();
     }
 
-    @Then("^Check if browser is started$")
-    public void check_if_browser_is_stared() throws Throwable {
-        System.out.println("00c-check_if_browser_is_stared executed");
+    @Then("^Check if page is ready$")
+    public void check_if_page_is_ready() {
+        HomePage.VerifyOnHomePage(testAssert);
     }
-
 }
